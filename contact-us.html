@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Plastic Patrol</title>
+
+<style>
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+    }
+
+    body{
+        background:#f5f5f5;
+    }
+
+    /* NAVBAR */
+
+    nav{
+        background:white;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:20px 60px;
+    }
+
+    .logo{
+        display:flex;
+        align-items:center;
+        gap:15px;
+    }
+
+    .main-logo{
+        width:85px;
+        height:85px;
+        object-fit:cover;
+    }
+
+    .logo h1{
+        font-size:35px;
+        color:#0a3d7a;
+    }
+
+    .logo span{
+        color:green;
+    }
+
+    nav ul{
+        display:flex;
+        list-style:none;
+        gap:40px;
+    }
+
+    nav ul li a{
+        text-decoration:none;
+        color:#0a3d7a;
+        font-size:20px;
+        font-weight:bold;
+    }
+
+    nav ul li a:hover{
+        color:green;
+    }
+
+    /* HERO SECTION */
+
+    .contact-hero{
+        background:linear-gradient(to right,#dff4ff,#ffffff);
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:80px 60px;
+        gap:40px;
+        flex-wrap:wrap;
+    }
+
+    .hero-text{
+        width:50%;
+    }
+
+    .hero-text h2{
+        font-size:65px;
+        color:#083b77;
+        margin-bottom:20px;
+    }
+
+    .hero-text h3{
+        font-size:42px;
+        color:green;
+        margin-bottom:20px;
+    }
+
+    .hero-text p{
+        font-size:24px;
+        line-height:1.8;
+    }
+
+    .hero-image{
+        width:40%;
+    }
+
+    .hero-image img{
+        width:100%;
+        border-radius:25px;
+        box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    /* CONTACT SECTION */
+
+    .contact-section{
+        background:white;
+        margin:40px;
+        padding:50px;
+        border-radius:25px;
+        display:flex;
+        justify-content:space-between;
+        gap:40px;
+        flex-wrap:wrap;
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-info{
+        width:40%;
+    }
+
+    .contact-info h2{
+        font-size:50px;
+        color:#083b77;
+        margin-bottom:20px;
+    }
+
+    .contact-info p{
+        font-size:22px;
+        line-height:1.8;
+        margin-bottom:20px;
+        color:#333;
+    }
+
+    .feedback-form{
+        width:55%;
+    }
+
+    .feedback-form h2{
+        font-size:45px;
+        color:#0a7a3d;
+        margin-bottom:25px;
+    }
+
+    form{
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+    }
+
+    input,
+    textarea{
+        padding:18px;
+        border-radius:12px;
+        border:2px solid #cfd8dc;
+        font-size:18px;
+        outline:none;
+    }
+
+    textarea{
+        resize:none;
+        height:180px;
+    }
+
+    input:focus,
+    textarea:focus{
+        border-color:green;
+    }
+
+    button{
+        background:green;
+        color:white;
+        padding:16px;
+        border:none;
+        border-radius:40px;
+        font-size:20px;
+        font-weight:bold;
+        cursor:pointer;
+        transition:0.3s;
+    }
+
+    button:hover{
+        background:#0a7a0a;
+    }
+
+    /* THOUGHTS SECTION */
+
+    .thoughts-section{
+        background:linear-gradient(to right,#dff4ff,#ffffff);
+        margin:40px;
+        padding:50px;
+        border-radius:25px;
+        text-align:center;
+    }
+
+    .thoughts-section h2{
+        font-size:55px;
+        color:#083b77;
+        margin-bottom:25px;
+    }
+
+    .thoughts-section p{
+        font-size:24px;
+        line-height:1.8;
+        width:85%;
+        margin:auto;
+        color:#333;
+    }
+
+    /* COMMENT BOXES */
+
+    .comment-container{
+        display:flex;
+        justify-content:center;
+        gap:25px;
+        padding:40px;
+        flex-wrap:wrap;
+    }
+
+    .comment-box{
+        background:white;
+        width:320px;
+        padding:30px;
+        border-radius:20px;
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .comment-box h3{
+        font-size:28px;
+        color:#0a3d7a;
+        margin-bottom:15px;
+    }
+
+    .comment-box p{
+        font-size:20px;
+        line-height:1.7;
+        color:#333;
+    }
+
+    /* FOOTER */
+
+    footer{
+    background:#002d62;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:40px;
+    width:100%;
+}
+
+footer h3{
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+footer p{
+    font-size:18px;
+}
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
+
+        nav{
+            flex-direction:column;
+            gap:20px;
+        }
+
+        .contact-hero,
+        .contact-section{
+            flex-direction:column;
+            text-align:center;
+        }
+
+        .hero-text,
+        .hero-image,
+        .contact-info,
+        .feedback-form{
+            width:100%;
+        }
+
+        .hero-text h2,
+        .contact-info h2,
+        .thoughts-section h2{
+            font-size:45px;
+        }
+
+        .thoughts-section p{
+            width:100%;
+        }
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR -->
+
+<nav>
+
+    <div class="logo">
+
+        <img class="main-logo" src="Images/ICT GROUP LOGO.png" alt="Logo">
+
+        <h1>Plastic<br><span>Patrol</span></h1>
+
+    </div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="about.html">About</a></li>
+
+        <li><a href="effects.html">Effects</a></li>
+
+        <li><a href="solutions.html">Solutions</a></li>
+
+        <li><a href="take-action.html">Take Action</a></li>
+
+        <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+
+</nav>
+
+<!-- HERO SECTION -->
+
+<section class="contact-hero">
+
+    <div class="hero-text">
+
+        <h2>CONTACT US</h2>
+
+        <h3>We Value Your Feedback</h3>
+
+        <p>
+            Your thoughts and ideas can help us improve
+            Plastic Patrol and inspire more people to protect
+            the environment. Share your feedback, opinions,
+            and suggestions with us.
+        </p>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="Images/ICT GROUP LOGO.png" alt="Contact Us">
+
+    </div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section class="contact-section">
+
+    <div class="contact-info">
+
+        <h2>GET IN TOUCH</h2>
+
+        <p>
+            We would love to hear what you think about our website
+            and our mission to reduce plastic pollution.
+        </p>
+
+        <p>
+            Share your feedback, ideas, or environmental thoughts
+            with our team. Together, we can create a cleaner future.
+        </p>
+
+    </div>
+
+    <form action="https://formsubmit.co/blossomkoe913@gmail.com" method="POST">
+
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="hidden" name="_subject" value="New Plastic Patrol Feedback!">
+
+    <input type="text" name="name" placeholder="Enter Your Name" required>
+
+    <input type="email" name="email" placeholder="Enter Your Email" required>
+
+    <textarea name="message" placeholder="Share your thoughts or feedback..." required></textarea>
+
+    <button type="submit">Submit Feedback</button>
+
+</form>
+</section>
+<!-- THOUGHTS SECTION -->
+
+<section class="thoughts-section">
+
+    <h2>YOUR VOICE MATTERS</h2>
+
+    <p>
+        Every opinion and idea can inspire change.
+        By sharing your thoughts, you help spread awareness
+        and encourage others to take action against plastic pollution.
+    </p>
+
+</section>
+
+<!-- COMMENT BOXES -->
+
+<section class="comment-container">
+
+    <div class="comment-box">
+
+        <h3>Awareness Matters</h3>
+
+        <p>
+            “This website taught me how harmful plastic pollution
+            can be to oceans and animals.”
+        </p>
+
+    </div>
+
+    <div class="comment-box">
+
+        <h3>Positive Change</h3>
+
+        <p>
+            “I started using reusable bottles after learning
+            more about plastic waste.”
+        </p>
+
+    </div>
+
+    <div class="comment-box">
+
+        <h3>Inspiring Others</h3>
+
+        <p>
+            “Plastic Patrol inspired me to encourage my friends
+            to recycle more often.”
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>Group 6 | Year 7 ICT PBL | TGG Campus</h3>
+
+    <p>Together we can reduce plastic pollution.</p>
+
+</footer>
+
+</body>
+</html>

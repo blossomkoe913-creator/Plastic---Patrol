@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions | Plastic Patrol</title>
+
+<style>
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+    }
+
+    body{
+        background:#f5f5f5;
+    }
+
+    /* NAVBAR */
+
+    nav{
+        background:white;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:20px 60px;
+    }
+
+    .logo{
+        display:flex;
+        align-items:center;
+        gap:15px;
+    }
+
+    .main-logo{
+        width:85px;
+        height:85px;
+        object-fit:cover;
+    }
+
+    .logo h1{
+        font-size:35px;
+        color:#0a3d7a;
+    }
+
+    .logo span{
+        color:green;
+    }
+
+    nav ul{
+        display:flex;
+        list-style:none;
+        gap:40px;
+    }
+
+    nav ul li a{
+        text-decoration:none;
+        color:#0a3d7a;
+        font-size:20px;
+        font-weight:bold;
+    }
+
+    nav ul li a:hover{
+        color:green;
+    }
+
+    /* SOLUTIONS HERO */
+
+    .solutions-hero{
+        background:linear-gradient(to right,#dff4ff,#ffffff);
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:80px 60px;
+        gap:40px;
+        flex-wrap:wrap;
+    }
+
+    .solutions-hero-text{
+        width:50%;
+    }
+
+    .solutions-hero-text h2{
+        font-size:65px;
+        color:#083b77;
+        margin-bottom:20px;
+    }
+
+    .solutions-hero-text h3{
+        font-size:45px;
+        color:green;
+        margin-bottom:20px;
+    }
+
+    .solutions-hero-text p{
+        font-size:24px;
+        line-height:1.7;
+        margin-bottom:30px;
+    }
+
+    
+    .solutions-hero-image{
+        width:42%;
+    }
+
+    .solutions-hero-image img{
+        width:100%;
+        border-radius:25px;
+        box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    /* SECTION TITLE */
+
+    .section-title{
+        text-align:center;
+        margin-top:50px;
+    }
+
+    .section-title h2{
+        font-size:50px;
+        color:#083b77;
+    }
+
+    /* SOLUTION CARDS */
+
+    .solutions-cards{
+        display:flex;
+        justify-content:center;
+        gap:25px;
+        padding:50px;
+        flex-wrap:wrap;
+    }
+
+    .solution-card{
+        width:240px;
+        background:white;
+        border-radius:20px;
+        padding:30px 20px;
+        text-align:center;
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        transition:0.3s;
+    }
+
+    .solution-card:hover{
+        transform:translateY(-10px);
+    }
+
+    .solution-card img{
+        width:90px;
+        margin-bottom:20px;
+    }
+
+    .solution-card h3{
+        font-size:32px;
+        color:#0a3d7a;
+        margin-bottom:15px;
+    }
+
+    .solution-card p{
+        font-size:20px;
+        line-height:1.6;
+    }
+
+    /* IMPACT SECTION */
+
+    .impact-section{
+        background:linear-gradient(to right,#dff4ff,#ffffff);
+        margin:40px;
+        padding:50px;
+        border-radius:25px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:40px;
+        flex-wrap:wrap;
+    }
+
+    .impact-image{
+        width:40%;
+    }
+
+    .impact-image img{
+        width:100%;
+        border-radius:20px;
+    }
+
+    .impact-text{
+        width:55%;
+    }
+
+    .impact-text h2{
+        font-size:55px;
+        color:#0a7a3d;
+        margin-bottom:20px;
+    }
+
+    .impact-text p{
+        font-size:24px;
+        line-height:1.8;
+        margin-bottom:25px;
+    }
+
+    /* IMPACT BOXES */
+
+    .impact-boxes{
+        display:flex;
+        gap:20px;
+        flex-wrap:wrap;
+    }
+
+    .impact-box{
+        background:white;
+        padding:20px;
+        border-radius:15px;
+        width:180px;
+        text-align:center;
+        box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .impact-box h4{
+        font-size:22px;
+        color:#083b77;
+    }
+
+    
+    /* FOOTER */
+
+    footer{
+        background:#002d62;
+        color:white;
+        text-align:center;
+        padding:30px;
+        margin-top:40px;
+    }
+
+    footer h3{
+        margin-bottom:10px;
+        font-size:28px;
+    }
+
+    footer p{
+        font-size:18px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
+
+        nav{
+            flex-direction:column;
+            gap:20px;
+        }
+
+        .solutions-hero,
+        .impact-section,
+        .cta-section{
+            flex-direction:column;
+            text-align:center;
+        }
+
+        .solutions-hero-text,
+        .solutions-hero-image,
+        .impact-image,
+        .impact-text,
+        .cta-text,
+        .cta-image,
+        .earth-image{
+            width:100%;
+        }
+
+        .solutions-hero-text h2,
+        .impact-text h2,
+        .cta-text h2{
+            font-size:45px;
+        }
+
+        .impact-boxes{
+            justify-content:center;
+        }
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR -->
+
+<nav>
+
+    <div class="logo">
+
+        <img class="main-logo" src="Images/ICT GROUP LOGO.png" alt="Logo">
+
+        <h1>Plastic<br><span>Patrol</span></h1>
+
+    </div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="about.html">About</a></li>
+
+        <li><a href="effects.html">Effects</a></li>
+
+        <li><a href="solutions.html">Solutions</a></li>
+
+        <li><a href="take-action.html">Take Action</a></li>
+
+        <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+
+</nav>
+
+<!-- SOLUTIONS HERO -->
+
+<section class="solutions-hero">
+
+    <div class="solutions-hero-text">
+
+        <h2>OUR SOLUTIONS</h2>
+
+        <h3>A Better Future Is In Our Hands</h3>
+
+        <p>
+            We all have the power to reduce plastic pollution.
+            By making smarter choices, supporting innovation,
+            and working together, we can build a cleaner,
+            healthier planet for future generations.
+        </p>
+    </div>
+
+    <div class="solutions-hero-image">
+
+        <img src="Images/marine plastics.webp" alt="Ocean Turtle">
+
+    </div>
+
+</section>
+
+<!-- SECTION TITLE -->
+
+<div class="section-title">
+
+    <h2>SMART SOLUTIONS FOR A CLEANER PLANET</h2>
+
+</div>
+
+<!-- SOLUTION CARDS -->
+
+<section class="solutions-cards">
+
+    <div class="solution-card">
+
+        <img src="Images/Reduce icon.png" alt="Reduce">
+
+        <h3>REDUCE</h3>
+
+        <p>
+            Choose products with less plastic packaging
+            and avoid single-use items.
+        </p>
+
+    </div>
+
+    <div class="solution-card">
+
+        <img src="Images/reuse icon.png" alt="Reuse">
+
+        <h3>REUSE</h3>
+
+        <p>
+            Use reusable bottles, bags,
+            and containers every day.
+        </p>
+
+    </div>
+
+    <div class="solution-card">
+
+        <img src="Images/recycle icon.png" alt="Recycle">
+
+        <h3>RECYCLE</h3>
+
+        <p>
+            Recycle properly and ensure plastics
+            are sorted responsibly.
+        </p>
+
+    </div>
+
+    <div class="solution-card">
+
+        <img src="Images/Innovate icon.png" alt="Innovate">
+
+        <h3>INNOVATE</h3>
+
+        <p>
+            Support eco-friendly alternatives
+            and new innovations.
+        </p>
+
+    </div>
+
+    <div class="solution-card">
+
+        <img src="Images/educate icon.png" alt="Educate">
+
+        <h3>EDUCATE</h3>
+
+        <p>
+            Spread awareness about plastic pollution
+            and inspire others.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- IMPACT SECTION -->
+
+<section class="impact-section">
+
+    <div class="impact-image">
+
+        <img src="Images/Beach Cleanup.jpg" alt="Beach Cleanup">
+
+    </div>
+
+    <div class="impact-text">
+
+        <h2>TOGETHER, WE CAN MAKE AN IMPACT</h2>
+
+        <p>
+            Every small action adds up. When we choose
+            better alternatives and support responsible
+            habits, we create a wave of change that
+            leads to a plastic-free future.
+        </p>
+
+        <div class="impact-boxes">
+
+            <div class="impact-box">
+                <h4>Stronger Communities</h4>
+            </div>
+
+            <div class="impact-box">
+                <h4>Healthier Environment</h4>
+            </div>
+
+            <div class="impact-box">
+                <h4>Sustainable Future</h4>
+            </div>
+
+            <div class="impact-box">
+                <h4>Better Future</h4>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>Group 6 | Year 7 ICT PBL | TGG Campus</h3>
+
+    <p>Together we can reduce plastic pollution.</p>
+
+</footer>
+
+</body>
+</html>
